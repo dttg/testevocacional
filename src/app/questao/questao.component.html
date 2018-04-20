@@ -1,0 +1,12 @@
+<p>
+  {{ textoQuestao }}
+</p>
+
+<ul>
+  <li *ngFor="let opcao of opcoes; let i=index">
+    <label for="opt-{{ i }}">
+      <input type="checkbox" name="opt-{{ i }}" id="opt-{{ i }}">
+      {{ opcao }}
+    </label>
+  </li>
+</ul>
