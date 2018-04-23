@@ -26,8 +26,8 @@ projects.
 
 ## Sprint's Tasks and Goals
 
-- [ ] Add a material card as the question container;
-- [ ] Add a material radio button instead of the native select;
+- [x] Add a material card as the question container;
+- [x] Add a material radio button instead of the native select;
 - [ ] Add a material toolbar with the App's name, logo, User profile link;
 - [ ] Store a question's answer in a angular service;
 - [ ] Display multiple questions;

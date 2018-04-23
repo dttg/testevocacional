@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-questao',
@@ -16,6 +16,10 @@ export class QuestaoComponent implements OnInit {
     'Like it',
     'Love it',
   ];
+  answer = 'gimme';
+
+  @Input()
+  folded = false;
 
   constructor() { }
 

@@ -1,14 +1,11 @@
-:host {
+.foldedTitle {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
 }
 
-p {
-  width: 15rem;
+.foldedTitle .foldedAnswer {
+  justify-self: end;
+}
+.foldedTitle > * {
   align-self: center;
-  justify-self: center;
-}
-
-li {
-    list-style-type: none;
 }
