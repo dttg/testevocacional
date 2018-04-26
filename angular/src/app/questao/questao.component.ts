@@ -1,25 +1,23 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { RiasecQuestion } from '../riasec/riasec-question';
+import { RiasecAnswer } from '../riasec/riasec-answer';
 
 @Component({
   selector: 'app-questao',
   templateUrl: './questao.component.html',
-  styleUrls: ['./questao.component.css']
+  styleUrls: ['./questao.component.scss']
 })
 export class QuestaoComponent implements OnInit {
-
-  textoQuestao = 'Grade the quality and size of freshly cut logs';
-
-  opcoes = [
-    'Hate it',
-    'Dislike it',
-    'Neutral',
-    'Like it',
-    'Love it',
-  ];
-  answer = 'gimme';
-
   @Input()
   folded = false;
+
+  @Input()
+  questao: RiasecQuestion;
+
+  @Output()
+  respostaChange: EventEmitter<RiasecAnswer>;
+
+  resposta: RiasecAnswer;
 
   constructor() { }
 

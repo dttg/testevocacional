@@ -1,33 +1,20 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title (click)="folded = !folded">
-      <div *ngIf="!folded">
-        <h1>
-          Would you like to...
-        </h1>
-        <h1>
-          {{ textoQuestao }}
-        </h1>
-      </div>
-      <div *ngIf="folded" class="foldedTitle">
-        <h1>
-          {{ textoQuestao }}
-        </h1>
-        <h1 class="foldedAnswer">
-          {{ opcoes[answer] }}
-        </h1>
-      </div>
+      <h1>
+        {{ questao.text }}
+      </h1>
+      <span *ngIf="folded && resposta"
+      [innerHTML]="(resposta?.like ? ':expressionless:' : ':heart_eyes:') | emoji | appemoji"></span>
     </mat-card-title>
   </mat-card-header>
   <mat-card-content *ngIf="!folded">
+    questao.text
   </mat-card-content>
   <mat-card-actions *ngIf="!folded">
     <mat-grid-list cols="5" rowHeight="120px">
       <mat-grid-tile *ngFor="let opcao of [
           { text: 'Hate', icon: 'thumb_down', emoji: ':expressionless:'},
-          { text: 'Dislike', icon: 'thumb_down', emoji: ':thumbdown:'},
-          { text: 'Neutral', icon: 'thumbs_up_down', emoji: ':confused:'},
-          { text: 'Like', icon: 'thumb_up', emoji: ':thumbup:'},
           { text: 'Love', icon: 'favorite', emoji: ':heart_eyes:'}
         ]">
         <button mat-button>
