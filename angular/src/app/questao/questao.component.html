@@ -20,20 +20,22 @@
     </mat-card-title>
   </mat-card-header>
   <mat-card-content *ngIf="!folded">
-    <img mat-card-image src="" alt="">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, perspiciatis
-    inventore officiis beatae optio excepturi. Corporis atque voluptas ipsa veritatis
-    nesciunt quisquam possimus ipsum qui? Voluptates non nostrum autem ea.
   </mat-card-content>
   <mat-card-actions *ngIf="!folded">
-    <mat-radio-group [(ngModel)]="answer">
-      <mat-grid-list cols="5" rowHeight="100px">
-        <mat-grid-tile *ngFor="let opcao of opcoes; let i=index">
-          <mat-radio-button [value]="i">
-            {{ opcao }}
-          </mat-radio-button>
-        </mat-grid-tile>
-      </mat-grid-list>
-    </mat-radio-group>
+    <mat-grid-list cols="5" rowHeight="120px">
+      <mat-grid-tile *ngFor="let opcao of [
+          { text: 'Hate', icon: 'thumb_down', emoji: ':expressionless:'},
+          { text: 'Dislike', icon: 'thumb_down', emoji: ':thumbdown:'},
+          { text: 'Neutral', icon: 'thumbs_up_down', emoji: ':confused:'},
+          { text: 'Like', icon: 'thumb_up', emoji: ':thumbup:'},
+          { text: 'Love', icon: 'favorite', emoji: ':heart_eyes:'}
+        ]">
+        <button mat-button>
+          <span [innerHTML]="opcao.emoji | emoji | appemoji"></span>
+          <br>
+          <span>{{ opcao.text }}</span>
+        </button>
+      </mat-grid-tile>
+    </mat-grid-list>
   </mat-card-actions>
 </mat-card>

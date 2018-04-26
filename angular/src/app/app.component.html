@@ -1,13 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <i class="material-icons menu">menu</i>
-    <span class="head">
-      <i class="material-icons">question_answer</i> Let's find you a lovely career!
-    </span>
-    <i class="material-icons account">account_circle</i>
-  </mat-toolbar-row>
-</mat-toolbar>
+<div class="app-container" [class.is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button classs="menu" mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="head">Let's find you a lovely career!</h1>
+    <button class="account" mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav #snav>
+      <mat-nav-list>
+        <a mat-list-item routerLink=".">Go somewhere</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
 
-<app-questao></app-questao>
-<app-questao [folded]="true"></app-questao>
+      <app-questao></app-questao>
+
+      <app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
