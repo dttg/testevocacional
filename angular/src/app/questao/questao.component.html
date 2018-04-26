@@ -1,11 +1,10 @@
 <mat-card>
-  <mat-card-header>
-    <mat-card-title (click)="folded = !folded">
-      <h1>
-        {{ questao.text }}
-      </h1>
-      <span *ngIf="folded && resposta"
-      [innerHTML]="(resposta?.like ? ':expressionless:' : ':heart_eyes:') | emoji | appemoji"></span>
+  <mat-card-header (click)="folded = !folded">
+    <div mat-card-avatar class="header-image" [ngStyle]="{ 'background-image': 'url('+(
+         (resposta ? (resposta?.like ? ':heart_eyes:' : ':expressionless:') :':grey_question:') | emoji|appemoji:64:'url'
+      )+')' }"></div>
+    <mat-card-title>
+      <h1>{{ questao.text }}</h1>
     </mat-card-title>
   </mat-card-header>
   <mat-card-content *ngIf="!folded">
@@ -14,10 +13,10 @@
   <mat-card-actions *ngIf="!folded">
     <mat-grid-list cols="5" rowHeight="120px">
       <mat-grid-tile *ngFor="let opcao of [
-          { text: 'Hate', icon: 'thumb_down', emoji: ':expressionless:'},
-          { text: 'Love', icon: 'favorite', emoji: ':heart_eyes:'}
+          { value: 0, text: 'Hate', icon: 'thumb_down', emoji: ':expressionless:'},
+          { value: 1, text: 'Love', icon: 'favorite', emoji: ':heart_eyes:'}
         ]">
-        <button mat-button>
+        <button mat-button (click)="votar(questao, opcao)">
           <span [innerHTML]="opcao.emoji | emoji | appemoji"></span>
           <br>
           <span>{{ opcao.text }}</span>

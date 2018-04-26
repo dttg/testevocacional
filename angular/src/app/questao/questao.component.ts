@@ -24,4 +24,13 @@ export class QuestaoComponent implements OnInit {
   ngOnInit() {
   }
 
+  votar(questao, opcao) {
+    this.resposta = {
+      index: questao.index,
+      grade: questao.grade,
+      like: opcao.value > 0,
+    };
+    this.folded = true;
+  }
+
 }
