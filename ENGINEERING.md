@@ -1,4 +1,4 @@
-Software Engineering
+Software Engineering - Career Test
 ====================
 
 [this is a stack file, append here]
@@ -24,7 +24,52 @@ and deliver to the Manager.
 my other projects so I can reuse the developer's knowledge resource in those other
 projects.
 
-## Sprint's Tasks and Goals
+## Call Meeting 2018-04-24 20:00
+
+Here we (client and developer) discussed the following points:
+- [x] Server provision: will be done by the Manager (at wpengine.com), if he fails we should use AWS;
+- [x] Database choice: MongoDB;
+- [x] The career choice's business logic will follow the hawaiipublicschools model;
+- [x] Should the app Stream answers? No, it will add too much complexity, time is short;
+- [x] Should PWA tech be used? No, it will add too much risk, time is short;
+- [ ] Git hosting provisioning: No answer yet;
+- [ ] Roadmap: Deliverables enumeration and dates: To be defined by the developer until tomorrow;
+- [x] Sprint size: 2 days, meeting at 20:00 every sprint end/start;
+- [x] Manager is stoodi.com.br;
+- [x] The color scheme should be red and blue;
+
+## Roadmap: Deliverables and Dates
+
+In order to provide this Roadmap to the Client, we use the following assumptions:
+- Angular, Angular Material Components and Material Design Guidance for front-end;
+- Docker is to be used on development, maybe useful to deployment also;
+- MongoDB as Database, the developer is not an expert but can do it;
+- Desing and App Integration with https://www.stoodi.com.br/embaixadores-do-stoodi/;
+- API Integration with https://segment.com;
+- The App's purpose is to acquire users (emails) and evolving them to new stoodi subscribers;
+
+As requested by the Client, here follows the roadmap:
+
+<ol>
+  <li> Scaffold base app; </li>
+  <li> Main screen layout (question, header, suggestion); </li>
+  <li> Apply color scheme; </li>
+  <li> Questions showing from memory database; </li>
+  <li> Storing answers to memory database; </li>
+  <li> Animate question in and out; </li>
+  <li> Show career suggestions (suggestions engine); </li>
+  <li> App state being register in memory database; </li>
+  <li> App running without back-end in provisioned server; </li>
+  <li> Back-end database running; </li>
+  <li> Back-end database integrated with front-end; </li>
+  <li> App running with back-end in provisioned server; </li>
+  <li> Login; </li>
+  <li> User profile and data screen; </li>
+  <li> Administration panel screen; </li>
+</ol>
+
+
+## Sprint's Coding Tasks and Goals
 
 - [x] Add a material card as the question container;
 - [x] Add a material radio button instead of the native select;
