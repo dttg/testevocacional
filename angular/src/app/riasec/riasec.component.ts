@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RiasecService } from './riasec.service';
+import { RiasecAnswer } from './riasec-answer';
 
 @Component({
   selector: 'app-riasec',
@@ -15,6 +16,10 @@ export class RiasecComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  addResposta(answer: RiasecAnswer) {
+    this.riasecService.addResponse(answer);
   }
 
 }

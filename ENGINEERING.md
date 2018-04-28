@@ -75,8 +75,8 @@ As requested by the Client, here follows the roadmap:
 - [x] Add a material radio button instead of the native select;
 - [x] Add a material toolbar with the App's name, logo, User profile link;
 - [x] Apply color scheme;
-- [ ] Store a question's answer in a angular service;
-- [ ] Display multiple questions;
+- [x] Store a question's answer in a angular service;
+- [x] Display multiple questions;
 - [ ] Animate the in (question presentation) and out (answer recorded);
 
 ## Git:

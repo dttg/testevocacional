@@ -1,1 +1,5 @@
-<app-questao *ngFor="let questao of questoes" [questao]="questao"></app-questao>
+<app-questao
+    *ngFor="let questao of questoes"
+    [questao]="questao"
+    (respostaChange)="addResposta($event)">
+</app-questao>

@@ -15,7 +15,7 @@ export class QuestaoComponent implements OnInit {
   questao: RiasecQuestion;
 
   @Output()
-  respostaChange: EventEmitter<RiasecAnswer>;
+  respostaChange = new EventEmitter<RiasecAnswer>();
 
   resposta: RiasecAnswer;
 
@@ -30,6 +30,7 @@ export class QuestaoComponent implements OnInit {
       grade: questao.grade,
       like: opcao.value > 0,
     };
+    this.respostaChange.emit(this.resposta);
     this.folded = true;
   }
 
