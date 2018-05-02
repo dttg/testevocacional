@@ -1,5 +1,9 @@
-<app-questao
-    *ngFor="let questao of questoes"
-    [questao]="questao"
-    (respostaChange)="addResposta($event)">
-</app-questao>
+<div *ngFor="let questao of questoes">
+    <app-questao
+        [ngClass]="deckPosition(questao)"
+        [@placeInDeck]="deckPosition(questao)"
+        [folded]="'current' !== deckPosition(questao)"
+        [questao]="questao"
+        (respostaChange)="addResposta($event)">
+    </app-questao>
+</div>

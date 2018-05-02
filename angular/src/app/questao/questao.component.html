@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card [ngClass]="{'folded': folded}">
   <mat-card-header (click)="folded = !folded">
     <div mat-card-avatar class="header-image" [ngStyle]="{ 'background-image': 'url('+(
          (resposta ? (resposta?.like ? ':heart_eyes:' : ':expressionless:') :':grey_question:') | emoji|appemoji:64:'url'
@@ -8,7 +8,6 @@
     </mat-card-title>
   </mat-card-header>
   <mat-card-content *ngIf="!folded">
-    questao.text
   </mat-card-content>
   <mat-card-actions *ngIf="!folded">
     <mat-grid-list cols="5" rowHeight="120px">

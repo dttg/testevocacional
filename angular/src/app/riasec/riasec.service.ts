@@ -16,7 +16,7 @@ export class RiasecService {
 
   addResponse(newAnswer: RiasecAnswer) {
     this.responses = [
-      ...this.responses.filter(answer => answer.index !== newAnswer.index),
+      ...this.responses.filter(answer => answer && newAnswer && answer.index !== newAnswer.index),
       newAnswer,
     ];
   }
