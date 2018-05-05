@@ -1,7 +1,7 @@
 <mat-card [ngClass]="{'folded': folded}">
   <mat-card-header (click)="folded = !folded">
     <div mat-card-avatar class="header-image" [ngStyle]="{ 'background-image': 'url('+(
-         (resposta ? (resposta?.like ? ':heart_eyes:' : ':expressionless:') :':grey_question:') | emoji|appemoji:64:'url'
+         (resposta ? (resposta?.like ? ':heart_eyes:' : ':expressionless:') :':grey_question:') | appemoji:64:'url'
       )+')' }"></div>
     <mat-card-title>
       <h1>{{ questao.text }}</h1>
@@ -16,7 +16,7 @@
           { value: 1, text: 'Love', icon: 'favorite', emoji: ':heart_eyes:'}
         ]">
         <button mat-button (click)="votar(questao, opcao)">
-          <span [innerHTML]="opcao.emoji | emoji | appemoji"></span>
+          <span [innerHTML]="opcao.emoji | appemoji"></span>
           <br>
           <span>{{ opcao.text }}</span>
         </button>

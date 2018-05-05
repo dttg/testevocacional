@@ -1,10 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import * as EmojiOne from 'emojione';
 
 @Pipe({
   name: 'appemoji'
 })
 export class EmojiPipe implements PipeTransform {
-
   public static readonly DEFAULT_EMOJI_SIZE = 64;
 
   /**
@@ -14,6 +14,8 @@ export class EmojiPipe implements PipeTransform {
    * @param args
    */
   transform(value: string, emojiSize: number, onlyUrl: 'url' | 'img'): any {
+    value = this.convertText(value);
+
     emojiSize = emojiSize > 0 ? emojiSize : EmojiPipe.DEFAULT_EMOJI_SIZE;
     if (onlyUrl && onlyUrl.startsWith('url')) {
       return value.replace(
@@ -29,4 +31,16 @@ export class EmojiPipe implements PipeTransform {
     );
   }
 
+  /**
+   * FROM https://github.com/jbw91/angular-emojione/blob/master/src/services/emoji.service.ts
+   * Replace shortcodes and/or native emoji in a blob of text to EmojiOne images
+   *
+   * @param {string} text
+   * @returns {string} text with EmojiOne images
+   *
+   * @memberOf EmojiService
+   */
+  public convertText(text: string) {
+    return EmojiOne.toImage(text);
+  }
 }
