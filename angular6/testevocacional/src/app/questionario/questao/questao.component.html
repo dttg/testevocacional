@@ -1,0 +1,24 @@
+<mat-card [ngClass]="{'folded': folded}">
+  <mat-card-header (click)="folded = !folded">
+    <div mat-card-avatar class="header-image" [ngStyle]="{ 'background-image': 'url('+urlEmojiResposta(resposta)+')' }"></div>
+    <mat-card-title>
+      <h1>{{ questao.text }}</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="!folded">
+  </mat-card-content>
+  <mat-card-actions *ngIf="!folded">
+    <mat-grid-list cols="5" rowHeight="120px">
+      <mat-grid-tile *ngFor="let opcao of [
+          { value: 0, text: 'Hate', icon: 'thumb_down', emoji: ':expressionless:'},
+          { value: 1, text: 'Love', icon: 'favorite', emoji: ':heart_eyes:'}
+        ]">
+        <button mat-button (click)="votar(questao, opcao)">
+          <span [innerHTML]="imgEmoji(opcao.emoji)"></span>
+          <br>
+          <span>{{ opcao.text }}</span>
+        </button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-actions>
+</mat-card>

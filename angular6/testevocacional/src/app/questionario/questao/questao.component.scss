@@ -1,0 +1,36 @@
+
+:host() {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 1rem;
+  @media(max-width: 800px) {
+    margin: 0.5rem;
+  }
+  .folded {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+mat-card {
+  width: 100%;
+  @media(min-width: 800px) {
+    width: 800px;
+  }
+}
+
+.foldedTitle {
+  display: grid;
+  grid-template-columns: auto 64px;
+  .foldedAnswer {
+    justify-self: end;
+  }
+  > * {
+    align-self: center;
+  }
+}
+.header-image {
+  background-size: cover;
+  background-image: url('/assets/emojione-static/64/2754.png');
+}
