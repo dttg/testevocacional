@@ -16,15 +16,17 @@ import {
   MatListModule,
   MatGridListModule,
   MatCardModule,
-  MatMenuModule
+  MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule
 } from '@angular/material';
 import { AppDashComponent } from './app-dash/app-dash.component';
+import { AppTableComponent } from './app-table/app-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
-    AppDashComponent
+    AppDashComponent,
+    AppTableComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,10 @@ import { AppDashComponent } from './app-dash/app-dash.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
