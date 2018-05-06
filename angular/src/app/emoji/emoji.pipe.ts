@@ -1,11 +1,18 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import * as EmojiOne from 'emojione';
+// import * as EmojiOne from 'emojione';
+import * as EmojiMap from './EmojiMap.json';
 
 @Pipe({
   name: 'appemoji'
 })
 export class EmojiPipe implements PipeTransform {
   public static readonly DEFAULT_EMOJI_SIZE = 64;
+  public static readonly EMOJI_MAP = <Array<{
+    text: string;
+    emojione: string;
+  }>>(<any>EmojiMap).emojiMap;
+
+  cache = [];
 
   /**
    *
@@ -14,7 +21,7 @@ export class EmojiPipe implements PipeTransform {
    * @param args
    */
   transform(value: string, emojiSize: number, onlyUrl: 'url' | 'img'): any {
-    value = this.convertText(value);
+    value = this.convertTextFast(value);
 
     emojiSize = emojiSize > 0 ? emojiSize : EmojiPipe.DEFAULT_EMOJI_SIZE;
     if (onlyUrl && onlyUrl.startsWith('url')) {
@@ -41,6 +48,17 @@ export class EmojiPipe implements PipeTransform {
    * @memberOf EmojiService
    */
   public convertText(text: string) {
-    return EmojiOne.toImage(text);
+    // const emojione = EmojiOne.toImage(text);
+    // this.cache.push({ text, emojione });
+    // console.log(this.cache);
+    // return emojione;
+  }
+
+  /**
+   * Programming marathon style calculation.
+   * @param text Pr
+   */
+  public convertTextFast(text: string) {
+    return EmojiPipe.EMOJI_MAP.find(item => item.text === text).emojione;
   }
 }

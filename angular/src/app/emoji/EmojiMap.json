@@ -1,0 +1,16 @@
+{
+    "emojiMap": [
+        {
+            "text": ":grey_question:",
+            "emojione": "<img class=\"emojione\" alt=\"❔\" title=\":grey_question:\" src=\"https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/2754.png\"/>"
+        },
+        {
+            "text": ":expressionless:",
+            "emojione": "<img class=\"emojione\" alt=\"😑\" title=\":expressionless:\" src=\"https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f611.png\"/>"
+        },
+        {
+            "text": ":heart_eyes:",
+            "emojione": "<img class=\"emojione\" alt=\"😍\" title=\":heart_eyes:\" src=\"https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f60d.png\"/>"
+        }
+    ]
+}
