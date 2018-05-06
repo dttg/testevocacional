@@ -53,12 +53,12 @@ export class QuestaoComponent implements OnInit {
     const url = this.urlEmoji(emojiName);
     switch (emojiName) {
       case ':heart_eyes:':
-        return `<img class="emojione" alt="😍" title=":heart_eyes:" src="${url}"/>'`;
+        return `<img class="emojione" alt="😍" title=":heart_eyes:" src="${url}"/>`;
       case ':expressionless:':
-        return `<img class="emojione" alt="😑" title=":expressionless:" src="${url}"/>'`;
+        return `<img class="emojione" alt="😑" title=":expressionless:" src="${url}"/>`;
 
       default:
-        return `<img class="emojione" alt="❔" title=":grey_question:" src="${url}"/>'`;
+        return `<img class="emojione" alt="❔" title=":grey_question:" src="${url}"/>`;
     }
   }
 
