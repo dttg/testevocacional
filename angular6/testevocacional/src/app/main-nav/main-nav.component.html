@@ -6,7 +6,7 @@
     [attr.role]="isHandset ? 'dialog' : 'navigation'"
     [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
     [opened]="!(isHandset | async)!.matches">
-    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-toolbar color="primary"></mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/" routerLinkActive="active">Home</a>
       <a mat-list-item routerLink="/questionario" routerLinkActive="active">Questionário</a>
@@ -15,6 +15,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
+
     <mat-toolbar color="primary">
       <button
         type="button"
@@ -24,7 +25,7 @@
         *ngIf="(isHandset | async)!.matches">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Application Title</span>
+      <h1>Let's find you a lovely career!</h1>
     </mat-toolbar>
 
     <ng-content></ng-content>
