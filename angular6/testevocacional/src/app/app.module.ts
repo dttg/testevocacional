@@ -20,6 +20,7 @@ import {
 } from '@angular/material';
 import { AppDashComponent } from './app-dash/app-dash.component';
 import { AppTableComponent } from './app-table/app-table.component';
+import { FooterModule } from './footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,9 @@ import { AppTableComponent } from './app-table/app-table.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ServiceWorkerModule.register('/ngsw-worker.js',
-    { enabled: environment.production }),
+    ServiceWorkerModule.register('/ngsw-worker.js', {
+      enabled: environment.production
+    }),
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -45,9 +47,10 @@ import { AppTableComponent } from './app-table/app-table.component';
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
