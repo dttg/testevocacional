@@ -14,6 +14,7 @@ export class QuestaoComponent implements OnInit {
   foldedActions = false;
 
   @Input() questao: RiasecQuestion;
+  @Input() placeholder: boolean;
 
   @Output() respostaChange = new EventEmitter<RiasecAnswer>();
 
@@ -21,7 +22,7 @@ export class QuestaoComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   votar(questao, opcao) {
     this.resposta = {

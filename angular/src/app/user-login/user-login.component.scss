@@ -1,0 +1,23 @@
+:host() {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  mat-card {
+    margin: 4rem;
+    @media(max-width: 800px) {
+      margin: 0.5rem;
+    }
+  }
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-card-content, mat-card-actions {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}

@@ -1,9 +1,19 @@
 <div *ngFor="let questao of questoes">
     <app-questao
+        [placeholder]="questao.text === 'placeholder'"
         [ngClass]="deckPosition(questao)"
         [@placeInDeck]="deckPosition(questao)"
         [folded]="'current' !== deckPosition(questao)"
         [questao]="questao"
         (respostaChange)="addResposta($event)">
     </app-questao>
+
+<!--
+    > email
+    Para começar informe seu emails
+    Envia email pra API
+
+    > resposta
+
+-->
 </div>

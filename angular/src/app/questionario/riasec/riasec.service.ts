@@ -5,20 +5,20 @@ import { RiasecAnswer } from './riasec-answer';
 
 @Injectable()
 export class RiasecService {
-
   responses: RiasecAnswer[] = [];
 
-  constructor() { }
+  constructor() {}
 
-  get questoes() {
+  get questoes(): RiasecQuestion[] {
     return (<any>riasec).questions;
   }
 
   addResponse(newAnswer: RiasecAnswer) {
     this.responses = [
-      ...this.responses.filter(answer => answer && newAnswer && answer.index !== newAnswer.index),
-      newAnswer,
+      ...this.responses.filter(
+        answer => answer && newAnswer && answer.index !== newAnswer.index
+      ),
+      newAnswer
     ];
   }
-
 }

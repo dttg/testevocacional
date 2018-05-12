@@ -1,5 +1,5 @@
-<mat-card [ngClass]="{'folded': folded}">
-  <mat-card-header (click)="folded = !folded">
+<mat-card [ngClass]="{'folded': folded}" *ngIf="!placeholder">
+  <mat-card-header>
     <div mat-card-avatar class="header-image" [ngStyle]="{ 'background-image': 'url(' + urlEmojiResposta(resposta) + ')' }"></div>
     <mat-card-title>
       <h1>{{ questao.text }}</h1>
@@ -21,4 +21,10 @@
       </mat-grid-tile>
     </mat-grid-list>
   </mat-card-actions>
+</mat-card>
+
+<mat-card *ngIf="placeholder">
+  <mat-card-content>
+    placeholder
+  </mat-card-content>
 </mat-card>

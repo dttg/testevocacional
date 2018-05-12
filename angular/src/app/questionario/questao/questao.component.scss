@@ -11,21 +11,22 @@
   .folded {
     margin: 0px;
     padding: 0px;
+    mat-card-title h1 {
+      height: 3.5em;
+    }
   }
 }
 mat-card {
+  margin: -2em 0;
   width: 100%;
   @media(min-width: 800px) {
     width: 800px;
   }
 }
 
-.foldedTitle {
+mat-card-header {
   display: grid;
-  grid-template-columns: auto 64px;
-  .foldedAnswer {
-    justify-self: end;
-  }
+  grid-template-columns: 64px auto;
   > * {
     align-self: center;
   }

@@ -17,20 +17,20 @@ import { RiasecQuestion } from './riasec-question';
   animations: [
     trigger('placeInDeck', [
       state('last-last', style({
-        filter: 'blur(1px)',
+        filter: 'blur(5px)',
         height: '2rem',
       })),
       state('last', style({
-        filter: 'blur(1px)',
+        filter: 'blur(5px)',
         transform: 'translateY(-2rem)',
       })),
       state('current', style({})),
       state('next', style({
-        filter: 'blur(1px)',
+        filter: 'blur(5px)',
         transform: 'translateY(2rem)',
       })),
       state('next-next', style({
-        filter: 'blur(1px)',
+        filter: 'blur(5px)',
         height: '2rem',
       })),
       state('hidden', style({
@@ -50,8 +50,15 @@ export class RiasecComponent implements OnInit {
   constructor(public riasecService: RiasecService) { }
 
   ngOnInit() {
-    this.questoes = this.riasecService.questoes;
-    this.questao = this.questoes[0];
+    const placeHolderFactory = (index: number): RiasecQuestion => ({ grade: 'R', index, text: 'placeholder' });
+    this.questoes = [
+      placeHolderFactory(0),
+      placeHolderFactory(1),
+      ...this.riasecService.questoes.map((q: RiasecQuestion) => ({...q, index: q.index + 2 })),
+      placeHolderFactory(this.riasecService.questoes.length + 1),
+      placeHolderFactory(this.riasecService.questoes.length + 2),
+    ];
+    this.questao = this.questoes[2];
     this.currentQuestion = this.questao.index;
   }
 
