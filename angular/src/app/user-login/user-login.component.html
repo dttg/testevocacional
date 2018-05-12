@@ -11,36 +11,32 @@
     </a>
     <br>
     <strong>ou</strong>
-    <form action="/cadastro/" method="post" novalidate="novalidate">
+    <form [formGroup]="form" (ngSubmit)="registerUser()">
       <mat-form-field>
-        <input matInput autofocus="" maxlength="255" name="name" placeholder="Seu nome" type="text">
+        <input matInput formControlName="name" maxlength="255" name="name" placeholder="Seu nome" type="text">
       </mat-form-field>
       <br>
       <mat-form-field>
-        <input matInput maxlength="255" name="email" placeholder="Seu email" type="email">
+        <input matInput formControlName="email" maxlength="255" name="email" placeholder="Seu email" type="email">
       </mat-form-field>
       <br>
-      <mat-form-field>
-        <input matInput maxlength="255" name="emailConfirmation" placeholder="Confirme seu email" type="email">
-      </mat-form-field>
-      <br>
-      <mat-checkbox checked="True">
+      <mat-checkbox checked="True" formControlName="newsletter">
         Desejo receber as novidades do Stoodi.
       </mat-checkbox>
       <br>
       <span>
         Clicando em "Próximo", você aceita os
-        <a href="/termos-de-uso/" target="_blank" title="Leia os termos de uso do Stoodi">termos de uso</a>
+        <a href="https://www.stoodi.com.br/termos-de-uso/" target="_blank" title="Leia os termos de uso do Stoodi">termos de uso</a>
         do Stoodi.
       </span>
     </form>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="accent" type="submit">
+    <button mat-raised-button color="accent" type="submit" (click)="registerUser()" [disabled]="form.pristine || form.invalid || sent">
       <mat-icon>expand_more</mat-icon>
       Próximo
       <mat-icon>expand_more</mat-icon>
     </button>
-    <a routerLink="questoes">questoes</a>
+    <mat-progress-bar *ngIf="sent" mode="indeterminate"></mat-progress-bar>
   </mat-card-actions>
 </mat-card>
