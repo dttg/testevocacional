@@ -10,7 +10,7 @@ const routes: Routes = [
     // canActivate: [AuthGuard],
     children: [
       { path: 'questao/:id', component: QuestaoComponent },
-      { path: '', redirectTo: 'questao/0', pathMatch: 'full' },
+      { path: '', redirectTo: 'questao/1', pathMatch: 'full' },
     ]
   }
 ];

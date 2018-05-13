@@ -12,11 +12,11 @@ export class RiasecService {
 
   constructor() { }
 
-  getQuestao(index: number = 0): Observable<RiasecQuestion> {
+  getQuestao(index: number = 1): Observable<RiasecQuestion> {
     return of(this.questoes.find(q => q.index === index)).pipe(delay(10));
   }
 
-  getResponsta(index: number = 0): Observable<RiasecAnswer> {
+  getResponsta(index: number = 1): Observable<RiasecAnswer> {
     return of(this.responses.find(q => q.index === index)).pipe(delay(10));
   }
 
