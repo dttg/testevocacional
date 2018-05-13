@@ -1,37 +1,64 @@
 import { Component, OnInit, Input, Output, EventEmitter, HostBinding } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
+
 import { RiasecQuestion } from '../riasec/riasec-question';
 import { RiasecAnswer } from '../riasec/riasec-answer';
+import { RiasecService } from '../riasec/riasec.service';
+import { Observable } from 'rxjs';
+import { slideInDownAnimation } from '../../animations/router-animation';
+import { questionChangeAnimation } from '../../animations/question-change-animation';
 
 @Component({
   selector: 'app-questao',
   templateUrl: './questao.component.html',
-  styleUrls: ['./questao.component.scss']
+  styleUrls: ['./questao.component.scss'],
+  animations: [slideInDownAnimation, questionChangeAnimation]
 })
 export class QuestaoComponent implements OnInit {
-  @Input()
-  @HostBinding('class.folded')
-  folded = false;
-  foldedActions = false;
+  @HostBinding('@routeAnimation') routeAnimation = true;
+  @HostBinding('style.display') display = 'flex';
+  @HostBinding('@changeQuestion')
+  changeQuestionState: 'showing' | 'voted' = 'showing';
 
-  @Input() questao: RiasecQuestion;
-  @Input() placeholder: boolean;
+  public questao: RiasecQuestion;
+  public resposta: RiasecAnswer;
+  public selectedId: number;
+  public questao$: Observable<RiasecQuestion>;
 
-  @Output() respostaChange = new EventEmitter<RiasecAnswer>();
+  constructor(
+    public riasecService: RiasecService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
-  resposta: RiasecAnswer;
-
-  constructor() {}
-
-  ngOnInit() { }
+  ngOnInit() {
+    this.activatedRoute.paramMap.pipe(
+      switchMap((params: ParamMap) => {
+        this.selectedId = +params.get('id');
+        return this.riasecService.getQuestao(this.selectedId);
+      })
+    ).subscribe(novaQuestao => {
+      this.questao = novaQuestao;
+      this.changeQuestionState = 'showing';
+      // this.resposta = null;
+      this.riasecService.getResponsta(this.selectedId).subscribe(resposta => this.resposta = resposta);
+    });
+  }
 
   votar(questao, opcao) {
-    this.resposta = {
+    this.changeQuestionState = 'voted';
+    const resposta = {
       index: questao.index,
       grade: questao.grade,
       like: opcao.value > 0
     };
-    this.respostaChange.emit(this.resposta);
-    this.folded = true;
+    this.resposta = null;
+    this.riasecService.addResponse(resposta).subscribe(response => {
+      this.router.navigate(['../', questao.index + 1], {
+        relativeTo: this.activatedRoute
+      });
+    });
   }
 
   urlEmoji(emojiName: string) {

@@ -1,30 +1,21 @@
-<mat-card [ngClass]="{'folded': folded}" *ngIf="!placeholder">
+<mat-card *ngIf="questao" [@changeQuestion]="changeQuestionState">
   <mat-card-header>
     <div mat-card-avatar class="header-image" [ngStyle]="{ 'background-image': 'url(' + urlEmojiResposta(resposta) + ')' }"></div>
     <mat-card-title>
-      <h1>{{ questao.text }}</h1>
+      <h1>{{ questao?.text }}</h1>
     </mat-card-title>
   </mat-card-header>
-  <mat-card-content *ngIf="!folded">
-  </mat-card-content>
-  <mat-card-actions *ngIf="!folded">
-    <mat-grid-list cols="5" rowHeight="120px">
-      <mat-grid-tile *ngFor="let opcao of [
-          { value: 0, text: 'Hate', icon: 'thumb_down', emoji: ':expressionless:'},
-          { value: 1, text: 'Love', icon: 'favorite', emoji: ':heart_eyes:'}
-        ]">
-        <button mat-button (click)="votar(questao, opcao)">
-          <span [innerHTML]="imgEmoji(opcao.emoji)"></span>
-          <br>
-          <span>{{ opcao.text }}</span>
-        </button>
-      </mat-grid-tile>
-    </mat-grid-list>
+  <mat-card-actions>
+    <button mat-button (click)="votar(questao, opcao)" *ngFor="let opcao of [
+      { value: 0, text: 'Hate', icon: 'thumb_down', emoji: ':expressionless:'},
+      { value: 1, text: 'Love', icon: 'favorite', emoji: ':heart_eyes:'}
+    ]">
+      <span [innerHTML]="imgEmoji(opcao.emoji)"></span>
+      <br>
+      <span>{{ opcao.text }}</span>
+    </button>
   </mat-card-actions>
 </mat-card>
 
-<mat-card *ngIf="placeholder">
-  <mat-card-content>
-    placeholder
-  </mat-card-content>
-</mat-card>
+<a mat-button [routerLink]="['../', selectedId -1]">Anterior</a>
+<a mat-button [routerLink]="['../', selectedId +1]">Próximo</a>

@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppDashComponent } from './app-dash/app-dash.component';
-import { AppTableComponent } from './app-table/app-table.component';
-import { RiasecModule, RiasecComponent } from './questionario/riasec/riasec.module';
 import { UserLoginModule, UserLoginComponent } from './user-login/user-login.module';
 
 const routes: Routes = [
-  { path: 'questoes', component: RiasecComponent },
-  { path: '**', component: UserLoginComponent },
+  {
+    path: 'questoes',
+    data: { preload: true },
+    loadChildren: './questionario/questionario.module#QuestionarioModule'
+  },
+  { path: '', component: UserLoginComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes),
-    RiasecModule,
-    UserLoginModule,
-  ],
+  imports: [RouterModule.forRoot(routes, {
+    // enableTracing: true, // <-- debugging purposes only
+  }), UserLoginModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
