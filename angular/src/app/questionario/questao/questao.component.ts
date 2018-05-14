@@ -2,12 +2,11 @@ import { Component, OnInit, Input, Output, EventEmitter, HostBinding } from '@an
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 
-import { RiasecQuestion } from '../riasec/riasec-question';
-import { RiasecAnswer } from '../riasec/riasec-answer';
 import { RiasecService } from '../riasec/riasec.service';
 import { Observable } from 'rxjs';
 import { slideInDownAnimation } from '../../animations/router-animation';
 import { questionChangeAnimation } from '../../animations/question-change-animation';
+import { RiasecQuestion, RiasecAnswer } from '../riasec/riasec-models';
 
 @Component({
   selector: 'app-questao',
@@ -36,13 +35,13 @@ export class QuestaoComponent implements OnInit {
     this.activatedRoute.paramMap.pipe(
       switchMap((params: ParamMap) => {
         this.selectedId = +params.get('id');
-        return this.riasecService.getQuestao(this.selectedId);
+        return this.riasecService.getQuestion(this.selectedId);
       })
     ).subscribe(novaQuestao => {
       this.questao = novaQuestao;
       this.changeQuestionState = 'showing';
       // this.resposta = null;
-      this.riasecService.getResponsta(this.selectedId).subscribe(resposta => this.resposta = resposta);
+      this.riasecService.getResponse(this.selectedId).subscribe(resposta => this.resposta = resposta);
     });
   }
 
@@ -55,9 +54,11 @@ export class QuestaoComponent implements OnInit {
     };
     this.resposta = null;
     this.riasecService.addResponse(resposta).subscribe(response => {
-      this.router.navigate(['../', questao.index + 1], {
-        relativeTo: this.activatedRoute
-      });
+      if (response.action === RiasecService.TEST_COMPLETE) {
+        this.router.navigate(['../../carreiras'], { relativeTo: this.activatedRoute });
+        return;
+      }
+      this.router.navigate(['../', questao.index + 1], { relativeTo: this.activatedRoute});
     });
   }
 

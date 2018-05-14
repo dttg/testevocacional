@@ -41,7 +41,7 @@ export class UserLoginComponent implements OnInit {
     this.userService.registerUser(user).subscribe(
       response => {
         this.openSnackBar(`Bem-vindo ${response.name}.`, 'Ok');
-        this.router.navigate(['/questoes']);
+        this.router.navigate(['/riasec']);
       },
       error => {
         this.sent = false;
@@ -49,7 +49,6 @@ export class UserLoginComponent implements OnInit {
       },
       () => (this.sent = false)
     );
-    // /questoes
   }
 
   openSnackBar(message: string, action: string) {

@@ -4,7 +4,7 @@ import { UserLoginModule, UserLoginComponent } from './user-login/user-login.mod
 
 const routes: Routes = [
   {
-    path: 'questoes',
+    path: 'riasec',
     data: { preload: true },
     loadChildren: './questionario/questionario.module#QuestionarioModule'
   },

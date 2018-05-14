@@ -6,6 +6,7 @@ import { QuestionarioComponent } from './questionario/questionario.component';
 import { QuestaoComponent } from './questao/questao.component';
 import { MatCardModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { RiasecService } from './riasec/riasec.service';
+import { CarreirasComponent } from './carreiras/carreiras.component';
 
 @NgModule({
   imports: [
@@ -14,11 +15,11 @@ import { RiasecService } from './riasec/riasec.service';
 
     MatCardModule,
     MatButtonModule,
-    MatIconModule,
+    MatIconModule
   ],
-  declarations: [QuestionarioComponent, QuestaoComponent],
-  exports: [QuestionarioComponent, QuestaoComponent],
-  providers: [RiasecService],
+  declarations: [QuestionarioComponent, QuestaoComponent, CarreirasComponent],
+  exports: [QuestionarioComponent, QuestaoComponent, CarreirasComponent],
+  providers: [RiasecService]
 })
 export class QuestionarioModule {}
 
