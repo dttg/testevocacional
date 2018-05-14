@@ -3,6 +3,24 @@ Software Engineering - Career Test
 
 [this is a stack file, append here]
 
+# Sprint 3: Engineering Document and new user stories
+
+- [ ] Fix animate question in and out;
+- [x] Show career suggestions (suggestions engine);
+- [ ] Protect routes with Auth and Questionary Guard;
+- [x] App state being register in memory database;
+- [x] App running without back-end;
+- [ ] App running without back-end in provisioned server;
+- [ ] Back-end database running;
+- [ ] Back-end database integrated with front-end;
+- [ ] App running with back-end in provisioned server;
+- [x] Login;
+- [ ] Login with facebook;
+- [ ] ~~User profile and data screen~~<sup>[1](#mudacaFoco)</sup>;
+- [ ] ~~Administration panel screen~~<sup>[1](#mudacaFoco)</sup>;
+
+<a name="mudacaFoco">[1]: Scaffold has been made, but deleted as the focus sifted.</a>
+
 # Sprint 2: Engineering Document and new user stories
 
 Taking notes on discussions and building this Document.
