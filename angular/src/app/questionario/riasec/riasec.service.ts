@@ -24,7 +24,6 @@ export class RiasecService {
   }
 
   addResponse(newAnswer: RiasecAnswer): Observable<{ next?: number, action?: string }> {
-    console.log('RiasecService@addResponse');
     this.responses = [
       ...this.responses.filter(
         answer => answer && newAnswer && answer.index !== newAnswer.index
@@ -39,9 +38,9 @@ export class RiasecService {
   }
 
   getCarreiras() {
-    if (this.responses.length < 42) {
-      return null;
-    }
+    // if (this.responses.length < 42) {
+    //   return null;
+    // }
     const riasecGrandTotal: RiasecGradeTotal[] = this.responses.reduce((acc, response) => {
       if (response.like === false) {
         // não contabilisa o que a pessoa não gosta.
