@@ -1,5 +1,4 @@
 @import '~@angular/material/theming';
-@import './app/footer/footer-theme';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -23,4 +22,3 @@ $career-app-theme: mat-light-theme($career-app-primary, $career-app-accent, $car
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($career-app-theme);
-@include footer-theme($career-app-theme);
