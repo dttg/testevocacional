@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter, HostBinding } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit, Input, Output, EventEmitter, HostBinding, AfterViewInit, QueryList, ViewChildren } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap, UrlSegment } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 
 import { RiasecService } from '../riasec/riasec.service';
@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { slideInDownAnimation } from '../../animations/router-animation';
 import { questionChangeAnimation } from '../../animations/question-change-animation';
 import { RiasecQuestion, RiasecAnswer } from '../riasec/riasec-models';
+import { MatButton } from '@angular/material';
 
 @Component({
   selector: 'app-questao',
@@ -14,11 +15,13 @@ import { RiasecQuestion, RiasecAnswer } from '../riasec/riasec-models';
   styleUrls: ['./questao.component.scss'],
   animations: [slideInDownAnimation, questionChangeAnimation]
 })
-export class QuestaoComponent implements OnInit {
+export class QuestaoComponent implements OnInit, AfterViewInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
   @HostBinding('style.display') display = 'flex';
   @HostBinding('@changeQuestion')
   changeQuestionState: 'showing' | 'voted' = 'showing';
+
+  @ViewChildren('focusShiftEl') focusShiftEl: QueryList<MatButton>;
 
   public questao: RiasecQuestion;
   public resposta: RiasecAnswer;
@@ -41,7 +44,20 @@ export class QuestaoComponent implements OnInit {
       this.questao = novaQuestao;
       this.changeQuestionState = 'showing';
       // this.resposta = null;
-      this.riasecService.getResponse(this.selectedId).subscribe(resposta => this.resposta = resposta);
+      this.riasecService
+        .getResponse(this.selectedId)
+        .subscribe(resposta => (this.resposta = resposta));
+    });
+  }
+
+  ngAfterViewInit() {
+    this.activatedRoute.url.subscribe(urlSegment => {
+      if (this.focusShiftEl) {
+        this.focusShiftEl.forEach(elemento => {
+          const naviteBtn: HTMLButtonElement = elemento._elementRef.nativeElement;
+          naviteBtn.children[naviteBtn.children.length - 1].classList.remove('mat-button-focus-overlay');
+        });
+      }
     });
   }
 
@@ -55,10 +71,14 @@ export class QuestaoComponent implements OnInit {
     this.resposta = null;
     this.riasecService.addResponse(resposta).subscribe(response => {
       if (response.action === RiasecService.TEST_COMPLETE) {
-        this.router.navigate(['../../carreiras'], { relativeTo: this.activatedRoute });
+        this.router.navigate(['../../carreiras'], {
+          relativeTo: this.activatedRoute
+        });
         return;
       }
-      this.router.navigate(['../', questao.index + 1], { relativeTo: this.activatedRoute});
+      this.router.navigate(['../', questao.index + 1], {
+        relativeTo: this.activatedRoute
+      });
     });
   }
 

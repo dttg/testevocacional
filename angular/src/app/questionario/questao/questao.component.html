@@ -1,14 +1,13 @@
 <mat-card *ngIf="questao" [@changeQuestion]="changeQuestionState">
-  <mat-card-header>
-    <div mat-card-avatar class="header-image" [ngStyle]="{ 'background-image': 'url(' + urlEmojiResposta(resposta) + ')' }"></div>
+  <mat-card-header color="accent">
     <mat-card-title>
       <h1>{{ questao?.text }}</h1>
     </mat-card-title>
   </mat-card-header>
   <mat-card-actions>
-    <button mat-button (click)="votar(questao, opcao)" *ngFor="let opcao of [
-      { value: 1, text: 'Love', icon: 'favorite', emoji: ':heart_eyes:'},
-      { value: 0, text: 'Hate', icon: 'thumb_down', emoji: ':expressionless:'}
+    <button mat-button #focusShiftEl (click)="votar(questao, opcao)" *ngFor="let opcao of [
+      { value: 1, text: 'LOVE', icon: 'favorite', emoji: ':heart_eyes:'},
+      { value: 0, text: 'HATE', icon: 'thumb_down', emoji: ':expressionless:'}
     ]">
       <span [innerHTML]="imgEmoji(opcao.emoji)"></span>
       <br>

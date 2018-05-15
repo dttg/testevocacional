@@ -7,11 +7,11 @@
   <mat-card-content>
     <a mat-raised-button color="primary">
       <mat-icon>perm_identity</mat-icon>
-      Entrar com Facebook
+      ENTRAR COM FACEBOOK
     </a>
     <br>
     <strong>ou</strong>
-    <form [formGroup]="form" (ngSubmit)="registerUser()">
+    <form [formGroup]="form" (ngSubmit)="registerUser()" (keyup.enter)="registerUser()">
       <mat-form-field>
         <input matInput formControlName="name" maxlength="255" name="name" placeholder="Seu nome" type="text">
       </mat-form-field>
@@ -25,7 +25,7 @@
       </mat-checkbox>
       <br>
       <span>
-        Clicando em "Próximo", você aceita os
+        Clicando em "PRÓXIMO", você aceita os
         <a href="https://www.stoodi.com.br/termos-de-uso/" target="_blank" title="Leia os termos de uso do Stoodi">termos de uso</a>
         do Stoodi.
       </span>
@@ -34,7 +34,7 @@
   <mat-card-actions>
     <button mat-raised-button color="accent" type="submit" (click)="registerUser()" [disabled]="form.pristine || form.invalid || sent">
       <mat-icon>expand_more</mat-icon>
-      Próximo
+      PRÓXIMO
       <mat-icon>expand_more</mat-icon>
     </button>
     <mat-progress-bar *ngIf="sent" mode="indeterminate"></mat-progress-bar>
