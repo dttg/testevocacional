@@ -24,13 +24,16 @@ mat-card {
 }
 
 mat-card-header {
-  display: grid;
-  grid-template-columns: 64px auto;
-  > * {
-    align-self: center;
-  }
+  display: flex;
+  justify-content: center;
 }
 .header-image {
   background-size: cover;
   background-image: url('/assets/emojione-static/64/2754.png');
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
 }

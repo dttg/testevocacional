@@ -65,14 +65,9 @@ export class QuestaoComponent implements OnInit {
   urlEmoji(emojiName: string) {
     switch (emojiName) {
       case ':heart_eyes:':
-        // :heart_eyes: 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f60d.png';
-        return 'assets/emojione-static/64/1f60d.png';
+        return 'assets/emojiisland.com/Heart_Eyes_Emoji.png';
       case ':expressionless:':
-        // :expressionless: 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/1f611.png';
-        return 'assets/emojione-static/64/1f611.png';
-      case ':grey_question:':
-        // :grey_question: 'https://cdn.jsdelivr.net/emojione/assets/3.1/png/32/2754.png';
-        return 'assets/emojione-static/64/2754.png';
+        return 'assets/emojiisland.com/Expressionless_Face_Emoji.png';
       default:
         return '';
     }
@@ -82,12 +77,12 @@ export class QuestaoComponent implements OnInit {
     const url = this.urlEmoji(emojiName);
     switch (emojiName) {
       case ':heart_eyes:':
-        return `<img class="emojione" alt="😍" title=":heart_eyes:" src="${url}"/>`;
+        return `<img height="128" alt="😍" title=":heart_eyes:" src="${url}"/>`;
       case ':expressionless:':
-        return `<img class="emojione" alt="😑" title=":expressionless:" src="${url}"/>`;
+        return `<img height="128" alt="😑" title=":expressionless:" src="${url}"/>`;
 
       default:
-        return `<img class="emojione" alt="❔" title=":grey_question:" src="${url}"/>`;
+        return '';
     }
   }
 
@@ -98,6 +93,6 @@ export class QuestaoComponent implements OnInit {
     if (resposta && !resposta.like) {
       return this.urlEmoji(':expressionless:');
     }
-    return this.urlEmoji(':grey_question:');
+    return '';
   }
 }
