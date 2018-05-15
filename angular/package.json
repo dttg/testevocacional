@@ -24,10 +24,10 @@
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/pwa": "^0.6.0",
     "@angular/router": "^6.0.0",
+    "@angular/service-worker": "^6.0.0",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26",
-    "@angular/service-worker": "^6.0.0"
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.0",
@@ -38,7 +38,6 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
-    "emojione-assets": "^3.1.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",
