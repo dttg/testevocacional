@@ -3,6 +3,26 @@ Software Engineering - Career Test
 
 [this is a stack file, append here]
 
+# 17 Jul 2018
+
+- Login page
+  - [ ] Change color of "Próximo" button and checkbox to #4555A5
+  - [ ] Remove chevrons from "Próximo" button
+  - [ ] Remove facebook login box
+- Question page
+  - [ ] It's hard to understand when you click on on the emoticon. An animation like fade-out/fade-in would be nice;
+  - [ ] Translate text to portuguese
+  - [ ] Put links to career at the end
+- [ ] Translations by Gustavo
+- [ ] Career links http://souvestibulando.com/carreiras.php
+
+# Video Call 05 Jul 2018
+
+- Desing
+- Segment.io integration
+- Deploy - get in touch with client
+- Facebook will need app?
+
 # Sprint 3: Engineering Document and new user stories
 
 - [ ] Fix animate question in and out;
