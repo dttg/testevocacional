@@ -9,8 +9,41 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://www.google.com/design/spec/style/color.html
+$career-app-blue: (
+    50: /*#e3f2fd*/#E3B1AF,
+    100: /*#bbdefb*/#BB9DAD,
+    200: /*#90caf9*/#9089AB,
+    300: /*#64b5f6*/#6474A8,
+    400: /*#42a5f5*/#4264A7,
+    500: /*#2196f3*/#4555A5,
+    600: /*#1e88e5*/#5ECBFF,
+    700: /*#1976d2*/#5ABAFF,
+    800: /*#1565c0*/#529CFF,
+    900: /*#0d47a1*/#4555A5,
+    A100: #82b1ff,
+    A200: #448aff,
+    A400: #2979ff,
+    A700: #2962ff,
+    contrast: (
+      50: $dark-primary-text,
+      100: $dark-primary-text,
+      200: $dark-primary-text,
+      300: $dark-primary-text,
+      400: $dark-primary-text,
+      500: $light-primary-text,
+      600: $light-primary-text,
+      700: $light-primary-text,
+      800: $light-primary-text,
+      900: $light-primary-text,
+      A100: $dark-primary-text,
+      A200: $light-primary-text,
+      A400: $light-primary-text,
+      A700: $light-primary-text,
+    )
+  );
+
 $career-app-primary: mat-palette($mat-blue);
-$career-app-accent:  mat-palette($mat-red);
+$career-app-accent:  mat-palette($career-app-blue);
 
 // The warn palette is optional (defaults to red).
 $career-app-warn:    mat-palette($mat-deep-orange);

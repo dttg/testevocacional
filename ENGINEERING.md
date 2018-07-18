@@ -6,15 +6,29 @@ Software Engineering - Career Test
 # 17 Jul 2018
 
 - Login page
-  - [ ] Change color of "Próximo" button and checkbox to #4555A5
-  - [ ] Remove chevrons from "Próximo" button
-  - [ ] Remove facebook login box
+  - [x] Change color of "Próximo" button and checkbox to #4555A5
+  - [x] Remove chevrons from "Próximo" button
+  - [x] Remove facebook login box
 - Question page
   - [ ] It's hard to understand when you click on on the emoticon. An animation like fade-out/fade-in would be nice;
   - [ ] Translate text to portuguese
   - [ ] Put links to career at the end
 - [ ] Translations by Gustavo
 - [ ] Career links http://souvestibulando.com/carreiras.php
+
+## career-app-blue palette
+| # | original | Rx | Gx | Bx | Rd | Gd | Bd | diff | diff | diff | Rn | Gn | Bn | Rnx | Gnx | Bnx | new |
+|----|--------|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
+| 50 | e3f2fd | e3 | f2 | fd | 227 | 242 | 253 | -40 | -20 | -2 | 227 | 177 | 175 | E3 | B1 | AF | E3B1AF|
+| 100 | bbdefb | bb | de | fb | 187 | 222 | 251 | -43 | -20 | -2 | 187 | 157 | 173 | BB | 9D | AD | BB9DAD|
+| 200 | 90caf9 | 90 | ca | f9 | 144 | 202 | 249 | -44 | -21 | -3 | 144 | 137 | 171 | 90 | 89 | AB | 9089AB|
+| 300 | 64b5f6 | 64 | b5 | f6 | 100 | 181 | 246 | -34 | -16 | -1 | 100 | 116 | 168 | 64 | 74 | A8 | 6474A8|
+| 400 | 42a5f5 | 42 | a5 | f5 | 66 | 165 | 245 | -33 | -15 | -2 | 66 | 100 | 167 | 42 | 64 | A7 | 4264A7|
+| 500 | 2196f3 | 21 | 96 | f3 | 33 | 150 | 243 | -3 | -14 | -14 | 69 | 85 | 165 | 45 | 55 | A5 | 4555A5|
+| 600 | 1e88e5 | 1e | 88 | e5 | 30 | 136 | 229 | -5 | -18 | -19 | 86 | 150 | 233 | 56 | 96 | E9 | 5696E9|
+| 700 | 1976d2 | 19 | 76 | d2 | 25 | 118 | 210 | -4 | -17 | -18 | 81 | 132 | 214 | 51 | 84 | D6 | 5184D6|
+| 800 | 1565c0 | 15 | 65 | c0 | 21 | 101 | 192 | -8 | -30 | -31 | 77 | 115 | 196 | 4D | 73 | C4 | 4D73C4|
+| 900 | 0d47a1 | 0d | 47 | a1 | 13 | 71 | 161 |  |  |  | 69 | 85 | 165 | 45 | 55 | A5 | 4555A5|
 
 # Video Call 05 Jul 2018
 
