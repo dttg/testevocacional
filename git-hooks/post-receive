@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
-cd angular
+cd /var/www/testevocacional/angular
+git pull origin master
 npm i && npm run build:prod
