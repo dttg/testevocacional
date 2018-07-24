@@ -1,4 +1,15 @@
-#!/usr/bin/env sh
-cd /var/www/testevocacional/angular
-git pull origin master
-npm i && npm run build:prod
+#!/bin/bash
+WORKDIR=/var/www/testevocacional/angular
+BAREDIR=/var/www/testevocacional.git
+while read oldrev newrev ref
+do
+    if [[ $ref =~ .*/master$ ]];
+    then
+        echo "Master ref received.  Deploying master branch to production..."
+        git --work-tree=$WORKDIR --git-dir=$BAREDIR checkout -f
+        cd $WORKDIR
+        npm ci && npm run build:prod
+    else
+        echo "Ref $ref successfully received.  Doing nothing: only the master branch may be deployed on this server."
+    fi
+done
