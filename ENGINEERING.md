@@ -3,6 +3,11 @@ Software Engineering - Career Test
 
 [this is a stack file, append here]
 
+# 24 Jul 2018
+
+- [x] Segment.io working;
+- [x] Deploy to digitalocean.com;
+
 # 17 Jul 2018
 
 - Login page
