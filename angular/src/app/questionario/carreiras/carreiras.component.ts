@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RiasecService } from '../riasec/riasec.service';
-import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-carreiras',
