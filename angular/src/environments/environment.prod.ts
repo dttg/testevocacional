@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  segmentKey: 'mwTGLTNHCbupiY37apjC5IRN2pErVRxH'
 };

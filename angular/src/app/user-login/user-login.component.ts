@@ -38,12 +38,13 @@ export class UserLoginComponent implements OnInit {
   registerUser() {
     const user = this.form.value;
     this.sent = true;
-    this.userService.registerUser(user).subscribe(
+    this.userService.identify(user).subscribe(
       response => {
         this.openSnackBar(`Bem-vindo ${response.name}.`, 'Ok');
         this.router.navigate(['/riasec']);
       },
       error => {
+        console.error(error);
         this.sent = false;
         this.openSnackBar('Não foi possivel fazer seu Login', 'Ok');
       },
