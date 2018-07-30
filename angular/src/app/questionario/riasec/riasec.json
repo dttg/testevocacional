@@ -214,119 +214,292 @@
     "results": [
         {
             "grade": "R",
-            "title": "Realistic",
-            "text": "These people are often good at mechanical or athletic jobs. Good college majors for Realistic people are…",
+            "title": "Realista",
+            "text": "Pessoas que gostam de trabalhos manuais e de desempenhar tarefas tangíveis. As seguintes carreiras são indicadas para pessoas do tipo 'realista':",
             "careers": [
-                "Agriculture",
-                "Health Assistant",
-                "Computers",
-                "Construction",
-                "Mechanic/Machinist",
-                "Engineering",
-                "Food and Hospitality"
+                {
+                    "name": "Agronomia",
+                    "link": "http://souvestibulando.com/carreiras/agronomia.php"
+                },
+                {
+                    "name": "Terapia Ocupacional",
+                    "link": "http://souvestibulando.com/carreiras/terapia_ocupacional.php"
+                },
+                {
+                    "name": "Ciência da Computação",
+                    "link": "http://souvestibulando.com/carreiras/ciencia_da_computacao.php"
+                },
+                {
+                    "name": "Engenharia Civil",
+                    "link": "http://souvestibulando.com/carreiras/engenharia_civil.php"
+                },
+                {
+                    "name": "Engenharia Mecânica",
+                    "link": "http://souvestibulando.com/carreiras/engenharia_mecanica.php"
+                },
+                {
+                    "name": "Odontologia",
+                    "link": "http://souvestibulando.com/carreiras/odontologia.php"
+                },
+                {
+                    "name": "Fonoaudiologia",
+                    "link": "http://souvestibulando.com/carreiras/fonoaudiologia.php"
+                },
+                {
+                    "name": "Engenharia de Automação",
+                    "link": "http://souvestibulando.com/carreiras/engenharia_de_automacao.php"
+                },
+                {
+                    "name": "Engenharia de Minas",
+                    "link": "http://souvestibulando.com/carreiras/engenharia_de_minas.php"
+                },
+                {
+                    "name": "Gastronomia",
+                    "link": "http://souvestibulando.com/carreiras/gastronomia.php"
+                }
             ],
             "related": [
-                "Natural Resources",
-                "Health Services",
-                "Industrial and Engineering",
-                "Technology",
-                "Arts and Communication"
+                {
+                    "name": "Engenharia Ambiental",
+                    "link": "http://souvestibulando.com/carreiras/engenharia_ambiental.php"
+                },
+                {
+                    "name": "Medicina",
+                    "link": "http://souvestibulando.com/carreiras/medicina.php"
+                },
+                {
+                    "name": "Engenharia de Produção",
+                    "link": "http://souvestibulando.com/carreiras/engenharia_de_producao.php"
+                },
+                {
+                    "name": "Sistemas de Informação",
+                    "link": "http://souvestibulando.com/carreiras/sistemas_de_informacao.php"
+                },
+                {
+                    "name": "Música",
+                    "link": "http://souvestibulando.com/carreiras/musica.php"
+                }
             ]
         },
         {
             "grade": "I",
-            "title": "Investigative",
-            "text": "These people like to watch, learn, analyze and solve problems. Good college majors for Investigative people are…",
+            "title": "Investigativo",
+            "text": "Pessoas que gostam de aprender, analisar e resolver problemas. As seguintes carreiras são indicadas para pessoas do tipo 'investigativo':",
             "careers": [
-                "Marine Biology",
-                "Engineering",
-                "Chemistry",
-                "Zoology",
-                "Medicine/Surgery",
-                "Consumer Economics",
-                "Psychology"
+                {
+                    "name": "Biologia",
+                    "link": "http://souvestibulando.com/carreiras/ciencias_biologicas.php"
+                },
+                {
+                    "name": "Engenharia Elétrica",
+                    "link": "http://souvestibulando.com/carreiras/engenharia_eletrica.php"
+                },
+                {
+                    "name": "Física",
+                    "link": "http://souvestibulando.com/carreiras/fisica.php"
+                },
+                {
+                    "name": "Química",
+                    "link": "http://souvestibulando.com/carreiras/quimica.php"
+                },
+                {
+                    "name": "Medicina Veterinária",
+                    "link": "http://souvestibulando.com/carreiras/medicina_veterinaria.php"
+                },
+                {
+                    "name": "Medicina",
+                    "link": "http://souvestibulando.com/carreiras/medicina.php"
+                },
+                {
+                    "name": "Economia",
+                    "link": "http://souvestibulando.com/carreiras/economia.php"
+                },
+                {
+                    "name": "Psicologia",
+                    "link": "http://souvestibulando.com/carreiras/psicologia.php"
+                }
             ],
             "related": [
-                "Health Services",
-                "Business",
-                "Public and Human Services",
-                "Industrial and Engineering",
-                "Technology"
+                {
+                    "name": "Engenharia Química",
+                    "link": "http://souvestibulando.com/carreiras/engenharia_quimica.php"
+                },
+                {
+                    "name": "Jornalismo",
+                    "link": "http://souvestibulando.com/carreiras/jornalismo.php"
+                },
+                {
+                    "name": "Engenharia Metalúrgica",
+                    "link": "http://souvestibulando.com/carreiras/engenharia_metalurgica.php"
+                },
+                {
+                    "name": "Ciência da Computação",
+                    "link": "http://souvestibulando.com/carreiras/ciencia_da_computacao.php"
+                }
             ]
         },
         {
             "grade": "A",
-            "title": "Artistic",
-            "text": "These people like to work in unstructured situations where they can use their creativity. Good majors for Artistic people are…",
+            "title": "Artístico",
+            "text": "Pessoas que gostam de trabalhar com tarefas que exigem criatividade. As seguintes carreiras são indicadas para pessoas do tipo 'artístico':",
             "careers": [
-                "Communications",
-                "Cosmetology",
-                "Fine and Performing Arts",
-                "Photography",
-                "Radio and TV",
-                "Interior Design",
-                "Architecture"
+                {
+                    "name": "Jornalismo",
+                    "link": "http://souvestibulando.com/carreiras/jornalismo.php"
+                },
+                {
+                    "name": "Letras",
+                    "link": "http://souvestibulando.com/carreiras/letras.php"
+                },
+                {
+                    "name": "Filosofia",
+                    "link": "http://souvestibulando.com/carreiras/filosofia.php"
+                },
+                {
+                    "name": "Publicidade",
+                    "link": "http://souvestibulando.com/carreiras/publicidade.php"
+                },
+                {
+                    "name": "Design",
+                    "link": "http://souvestibulando.com/carreiras/design.php"
+                },
+                {
+                    "name": "Arquitetura",
+                    "link": "http://souvestibulando.com/carreiras/arquitetura.php"
+                }
             ],
             "related": [
-                "Public and Human Services",
-                "Arts and Communication"
+                {
+                    "name": "Música",
+                    "link": "http://souvestibulando.com/carreiras/musica.php"
+                },
+                {
+                    "name": "Gastronomia",
+                    "link": "http://souvestibulando.com/carreiras/gastronomia.php"
+                }
             ]
         },
         {
             "grade": "S",
             "title": "Social",
-            "text": "These people like to work with other people, rather than things. Good college majors for Social people are…",
+            "text": "Pessoas sociáveis, que gostam de se relacionar e trabalhar com outras pessoas. As seguintes carreiras são indicadas para pessoas do tipo 'social':",
             "careers": [
-                "Counseling",
-                "Nursing",
-                "Physical Therapy",
-                "Travel",
-                "Advertising",
-                "Public Relations",
-                "Education"
+                {
+                    "name": "Pedagogia",
+                    "link": "http://souvestibulando.com/carreiras/pedagogia.php"
+                },
+                {
+                    "name": "Enfermagem",
+                    "link": "http://souvestibulando.com/carreiras/enfermagem.php"
+                },
+                {
+                    "name": "Fisioterapia",
+                    "link": "http://souvestibulando.com/carreiras/fisioterapia.php"
+                },
+                {
+                    "name": "Educação Física",
+                    "link": "http://souvestibulando.com/carreiras/educacao_fisica.php"
+                },
+                {
+                    "name": "Nutrição",
+                    "link": "http://souvestibulando.com/carreiras/nutricao.php"
+                },
+                {
+                    "name": "Publicidade",
+                    "link": "http://souvestibulando.com/carreiras/publicidade.php"
+                }
             ],
             "related": [
-                "Health Services",
-                "Public and Human Services"
+                {
+                    "name": "Sociologia",
+                    "link": "http://souvestibulando.com/carreiras/sociologia.php"
+                },
+                {
+                    "name": "Jornalismo",
+                    "link": "http://souvestibulando.com/carreiras/jornalismo.php"
+                }
             ]
         },
         {
             "grade": "E",
-            "title": "Enterprising",
-            "text": "These people like to work with others and enjoy persuading and and performing. Good college majors for Enterprising people are…",
+            "title": "Coorporativo",
+            "text": "Pessoas que trabalham bem em equipe e gostam de trabalhar em alta performance. As seguintes carreiras são indicadas para pessoas do tipo 'coorporativo':",
             "careers": [
-                "Fashion Merchandising",
-                "Real Estate",
-                "Marketing/Sales",
-                "Law",
-                "Political Science",
-                "International Trade",
-                "Banking/Finance"
+                {
+                    "name": "Moda",
+                    "link": "http://souvestibulando.com/carreiras/moda.php"
+                },
+                {
+                    "name": "Administração",
+                    "link": "http://souvestibulando.com/carreiras/administracao.php"
+                },
+                {
+                    "name": "Publicidade",
+                    "link": "http://souvestibulando.com/carreiras/publicidade.php"
+                },
+                {
+                    "name": "Direito",
+                    "link": "http://souvestibulando.com/carreiras/direito.php"
+                },
+                {
+                    "name": "Relações Internacionais",
+                    "link": "http://souvestibulando.com/carreiras/relacoes_internacionais.php"
+                },
+                {
+                    "name": "Ciências Contábeis",
+                    "link": "http://souvestibulando.com/carreiras/ciencias_contabeis.php"
+                }
             ],
             "related": [
-                "Business",
-                "Public and Human Services",
-                "Arts and Communication"
+                {
+                    "name": "Direito",
+                    "link": "http://souvestibulando.com/carreiras/direito.php"
+                },
+                {
+                    "name": "Design",
+                    "link": "http://souvestibulando.com/carreiras/design.php"
+                }
             ]
         },
         {
             "grade": "C",
-            "title": "Conventional",
-            "text": "These people are very detail oriented,organized and like to work with data. Good college majors for Conventional people are…",
+            "title": "Convencional",
+            "text": "Pessoas detalhistas, organizadas, que gostam de trabalhar com dados. As seguintes carreiras são indicadas para pessoas do tipo 'convencional':",
             "careers": [
-                "Accounting",
-                "Court Reporting",
-                "Insurance",
-                "Administration",
-                "Medical Records",
-                "Banking",
-                "Data Processing"
+                {
+                    "name": "Ciências Contábeis",
+                    "link": "http://souvestibulando.com/carreiras/ciencias_contabeis.php"
+                },
+                {
+                    "name": "Estatística",
+                    "link": "http://souvestibulando.com/carreiras/estatistica.php"
+                },
+                {
+                    "name": "Ciências Atuariais",
+                    "link": "http://souvestibulando.com/carreiras/ciencias_atuariais.php"
+                },
+                {
+                    "name": "Administração",
+                    "link": "http://souvestibulando.com/carreiras/administracao.php"
+                },
+                {
+                    "name": "Geologia",
+                    "link": "http://souvestibulando.com/carreiras/geologia.php"
+                },
+                {
+                    "name": "Matemática",
+                    "link": "http://souvestibulando.com/carreiras/matematica.php"
+                }
             ],
             "related": [
-                "Health Services",
-                "Business",
-                "Industrial and Engineering",
-                "Technology"
+                {
+                    "name": "História",
+                    "link": "http://souvestibulando.com/carreiras/historia.php"
+                },
+                {
+                    "name": "Geografia",
+                    "link": "http://souvestibulando.com/carreiras/geografia.php"
+                }
             ]
         }
     ]

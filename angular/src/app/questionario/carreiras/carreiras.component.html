@@ -14,7 +14,7 @@
     Carreiras:
     <ul>
       <li *ngFor="let carreira of resultado?.careers">
-        {{ carreira }}
+        <a href="{{ carreira.link }}">{{ carreira.name }}</a>
       </li>
     </ul>
   </mat-card-content>
