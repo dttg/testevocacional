@@ -2,212 +2,212 @@
     "questions": [
         {
             "index": 1,
-            "text": "I like to work on cars",
+            "text": "Trabalhar com carros",
             "grade": "R"
         },
         {
             "index": 2,
-            "text": "I like to do puzzles",
+            "text": "Resolver quebra-cabeças",
             "grade": "I"
         },
         {
             "index": 3,
-            "text": "I am good at working independently",
+            "text": "Trabalhar sozinho",
             "grade": "A"
         },
         {
             "index": 4,
-            "text": "I like to work in teams",
+            "text": "Trabalhar em equipes",
             "grade": "S"
         },
         {
             "index": 5,
-            "text": "I am an ambitious person, I set goals for myself",
+            "text": "Sou uma pessoa ambiciosa, estabeleço metas para mim",
             "grade": "E"
         },
         {
             "index": 6,
-            "text": "I like to organize things, (files, desks / offices)",
+            "text": "Organizar as coisas (arquivos, mesa, escritório...)",
             "grade": "C"
         },
         {
             "index": 7,
-            "text": "I like to build things",
+            "text": "Construir coisas",
             "grade": "R"
         },
         {
             "index": 8,
-            "text": "I like to read about art and music",
+            "text": "Ler sobre arte e musica",
             "grade": "A"
         },
         {
             "index": 9,
-            "text": "I like to have clear instructions to follow",
+            "text": "Ter instruções claras para seguir",
             "grade": "C"
         },
         {
             "index": 10,
-            "text": "I like to try to influence or persuade people",
+            "text": "Influenciar ou persuadir outras pessoas",
             "grade": "E"
         },
         {
             "index": 11,
-            "text": "I like to do experiments",
+            "text": "Fazer experimentos",
             "grade": "I"
         },
         {
             "index": 12,
-            "text": "I like to teach or train people",
+            "text": "Ensinar ou treinar outras pessoas",
             "grade": "S"
         },
         {
             "index": 13,
-            "text": "I like trying to help people solve their problems",
+            "text": "Ajudar as pessoas a resolver seus problemas",
             "grade": "S"
         },
         {
             "index": 14,
-            "text": "I like to take care of animals",
+            "text": "Cuidar de animais",
             "grade": "R"
         },
         {
             "index": 15,
-            "text": "I wouldn’t mind working 8 hours per day in an office",
+            "text": "Eu não me importaria de trabalhar 8h por dia em um escritório",
             "grade": "C"
         },
         {
             "index": 16,
-            "text": "I like selling things",
+            "text": "Vender coisas",
             "grade": "E"
         },
         {
             "index": 17,
-            "text": "I enjoy creative writing",
+            "text": "Escrever",
             "grade": "A"
         },
         {
             "index": 18,
-            "text": "I enjoy science",
+            "text": "Ciência",
             "grade": "I"
         },
         {
             "index": 19,
-            "text": "I am quick to take on new responsibilities",
+            "text": "Assumir novas responsabilidades rapidamente",
             "grade": "E"
         },
         {
             "index": 20,
-            "text": "I am interested in healing people",
+            "text": "Curar pessoas",
             "grade": "S"
         },
         {
             "index": 21,
-            "text": "I enjoy trying to figure out how things work",
+            "text": "Descobrir e entender como as coisas funcionam",
             "grade": "I"
         },
         {
             "index": 22,
-            "text": "I like putting things together or assembling things",
+            "text": "Montar coisas",
             "grade": "R"
         },
         {
             "index": 23,
-            "text": "I am a creative person",
+            "text": "Sou uma pessoa criativa",
             "grade": "A"
         },
         {
             "index": 24,
-            "text": "I pay attention to details",
+            "text": "Prestar atenção aos detalhes",
             "grade": "C"
         },
         {
             "index": 25,
-            "text": "I like to do filing or typing",
+            "text": "Digitar ou anotar coisas",
             "grade": "C"
         },
         {
             "index": 26,
-            "text": "I like to analyze things(problems / situations)",
+            "text": "Analisar problemas ou situações",
             "grade": "I"
         },
         {
             "index": 27,
-            "text": "I like to play instruments or sing",
+            "text": "Tocar instrumentos ou cantar",
             "grade": "A"
         },
         {
             "index": 28,
-            "text": "I enjoy learning about other cultures",
+            "text": "Aprender sobre outras culturas",
             "grade": "S"
         },
         {
             "index": 29,
-            "text": "I would like to start my own business",
+            "text": "Começar meu próprio negócio",
             "grade": "E"
         },
         {
             "index": 30,
-            "text": "I like to cook",
+            "text": "Cozinhar",
             "grade": "R"
         },
         {
             "index": 31,
-            "text": "I like acting in plays",
+            "text": "Atuar em peças",
             "grade": "A"
         },
         {
             "index": 32,
-            "text": "I am a practical person",
+            "text": "Sou uma pessoa pratica",
             "grade": "R"
         },
         {
             "index": 33,
-            "text": "I like working with numbers or charts",
+            "text": "Trabalhar com números, planilhas e gráficos",
             "grade": "I"
         },
         {
             "index": 34,
-            "text": "I like to get into discussions about issues",
+            "text": "Entrar em discussões sobre vários assuntos",
             "grade": "S"
         },
         {
             "index": 35,
-            "text": "I am good at keeping records of my work",
+            "text": "Registrar tudo o que faço no trabalho",
             "grade": "C"
         },
         {
             "index": 36,
-            "text": "I like to lead",
+            "text": "Liderar",
             "grade": "E"
         },
         {
             "index": 37,
-            "text": "I like working outdoors",
+            "text": "Trabalhar ao ar livre",
             "grade": "R"
         },
         {
             "index": 38,
-            "text": "I would like to work in an office",
+            "text": "Trabalhar em um escritório",
             "grade": "C"
         },
         {
             "index": 39,
-            "text": "I’m good at math",
+            "text": "Resolver desafios matemáticos",
             "grade": "I"
         },
         {
             "index": 40,
-            "text": "I like helping people",
+            "text": "Ajudar pessoas",
             "grade": "S"
         },
         {
             "index": 41,
-            "text": "I like to draw",
+            "text": "Desenhar",
             "grade": "A"
         },
         {
             "index": 42,
-            "text": "I like to give speeches",
+            "text": "Fazer discursos ou apresentações",
             "grade": "E"
         }
     ],
